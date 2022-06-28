@@ -803,6 +803,9 @@ a{
     color: white;
     text-align: center;
 }
+.spamDetection{
+    margin: 2em 0;
+}
 
 /* Footer Styling Section */
 footer{

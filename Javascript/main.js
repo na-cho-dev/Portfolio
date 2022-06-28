@@ -104,17 +104,16 @@ var typed = new Typed(".typed2", {
 
 
 
-let submit = document.querySelector("form");
+let form = document.querySelector("#formSubmit");
 let msg = document.querySelector(".conf-msg");
 let user = document.querySelector(".user");
 let email = document.querySelector(".email");
 let subject = document.querySelector(".subject");
 let comment = document.querySelector(".textarea");
 
-// console.log(name.value);
+//console.log(form);
 
-submit.addEventListener("submit", (e) => {
-    e.preventDefault();
+form.addEventListener("submit", (e) => {
 
     if(user.value.trim() == "" || email.value.trim() == "" || subject.value.trim() == "" || comment.value.trim() == ""){
 
@@ -133,6 +132,9 @@ submit.addEventListener("submit", (e) => {
             subject.style.border = "1.5px solid #777777";
             comment.style.border = "1.5px solid #777777";
         }, 3000);
+
+        e.preventDefault();
+        return false
     }
     else if (user.value.trim() !== "" || email.value.trim() !== "" || subject.value.trim() !== "" || comment.value.trim() !== ""){
 
@@ -148,5 +150,8 @@ submit.addEventListener("submit", (e) => {
             msg.classList.remove("success");
             msg.innerHTML = "";
         }, 3000);
+
+        form.submit();
+        return true;
     }       
 });
