@@ -119,7 +119,10 @@
         font-weight: bolder;
     }
     .about .about-content .left{
-        width: 70%;
+        width: 100%;
+    }
+    .about .about-content .left img{
+        width 80%;
     }
     .about .about-content .right{
         width: 90%;
