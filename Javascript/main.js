@@ -133,9 +133,6 @@ submit.addEventListener("submit", (e) => {
             subject.style.border = "1.5px solid #777777";
             comment.style.border = "1.5px solid #777777";
         }, 3000);
-        
-        console.log("Invalid");
-        return false
     }
     else if (user.value.trim() !== "" || email.value.trim() !== "" || subject.value.trim() !== "" || comment.value.trim() !== ""){
 
@@ -151,9 +148,5 @@ submit.addEventListener("submit", (e) => {
             msg.classList.remove("success");
             msg.innerHTML = "";
         }, 3000);
-        console.log("Succesfull");
-        return true
-    }
-        
-
+    }       
 });
