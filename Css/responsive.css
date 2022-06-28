@@ -98,20 +98,21 @@
         /* transform: translate(-25%); 
     } */
     .home .container{
-        line-height: 4.5em;
+        line-height: 4em;
         height: 50%;
+        text-align: center;
     }
     
     .home .home-content .text-1{
         font-size: 1.3em;
     }
     .home .home-content .text-2{
-        font-size: 2.5em;
+        font-size: 2em;
         font-weight: bolder;
         margin-left: -0.2em;
     }
     .home .home-content .text-3{
-        font-size: 2em;
+        font-size: 1.3em;
     }
     .home .home-content .text-3 span{
         color: #FF7F50;

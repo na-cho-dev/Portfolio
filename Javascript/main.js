@@ -87,13 +87,13 @@ window.addEventListener("scroll", ()=>{
 // Typing Animation Efffect
 
 var typed = new Typed(".typed1", {
-    strings: ["a Developer", "a Freelancer", "a Designer", "a Blogger"],
+    strings: ["a Web Developer", "a Freelancer", "a Graphics Designer", "An Affiliate Marketer"],
     typeSpeed: 150,
     backSpeed: 80,
     loop: true
 });
 var typed = new Typed(".typed2", {
-    strings: ["a Developer", "a Freelancer", "a Designer", "a Blogger"],
+    strings: ["a Web Developer", "a Freelancer", "a Graphics Designer", "An Affiliate Marketer"],
     typeSpeed: 150,
     backSpeed: 80,
     loop: true
@@ -112,15 +112,47 @@ let subject = document.querySelector(".subject");
 let comment = document.querySelector(".textarea");
 
 // console.log(name.value);
+
 submit.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if(user.value.trim() == "" || email.value.trim() == "" || subject.value.trim() || comment.value.trim() == ""){
+    if(user.value.trim() == "" || email.value.trim() == "" || subject.value.trim() == "" || comment.value.trim() == ""){
 
-        user.style.border = "2px solid #a00000";
-        email.style.border = "2px solid #a00000";
-        subject.style.border = "2px solid #a00000";
-        comment.style.border = "2px solid #a00000";
+        msg.classList.add("error");
+        msg.innerHTML = "Please fill in all fields"
+        user.style.border = "1px solid #a00000";
+        email.style.border = "1px solid #a00000";
+        subject.style.border = "1px solid #a00000";
+        comment.style.border = "1px solid #a00000";
+
+        setTimeout( () => {
+            msg.classList.remove("error");
+            msg.innerHTML = "";
+            user.style.border = "1.5px solid #777777";
+            email.style.border = "1.5px solid #777777";
+            subject.style.border = "1.5px solid #777777";
+            comment.style.border = "1.5px solid #777777";
+        }, 3000);
+        
+        console.log("Invalid");
+        return false
+    }
+    else if (user.value.trim() !== "" || email.value.trim() !== "" || subject.value.trim() !== "" || comment.value.trim() !== ""){
+
+        user.value = "";
+        email.value = "";
+        subject.value = "";
+        comment.value = "";
+
+        msg.classList.add("success");
+        msg.innerHTML = "Sent Successfully, Thank you.";
+
+        setTimeout( () => {
+            msg.classList.remove("success");
+            msg.innerHTML = "";
+        }, 3000);
+        console.log("Succesfull");
+        return true
     }
         
 

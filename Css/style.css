@@ -52,7 +52,9 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: "ubuntu", sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Titan One', cursive;
+    font-family: 'Ubuntu', sans-serif;
 }
 .container{
     max-width: 1100px;
@@ -280,6 +282,7 @@ a{
     bottom: -7px;
     padding: 3px;
     font-size: 0.6em;
+    font-family: 'Lato', sans-serif;
     background: #C4C4C4;
     transform: translateX(-50%);
 }
@@ -289,6 +292,7 @@ a{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+
 }
 .about .about-content .left{
     width: 45%;
@@ -301,6 +305,7 @@ a{
     font-size: 1.4em;
     font-weight: 550;
     margin-bottom: 0.5em;
+    font-family: 'Lato', sans-serif;
 }
 .about .about-content .right .text span{
     color: #FF7F50;
@@ -308,6 +313,7 @@ a{
 .about .about-content .right p{
     text-align: justify;
     margin-bottom: 1em;
+    font-family: 'Lato', sans-serif;
 }
 .about .about-content .right a{
     background: #FF7F50;
@@ -367,6 +373,7 @@ a{
     bottom: -7px;
     padding: 3px;
     font-size: 0.6em;
+    font-family: 'Lato', sans-serif;
     background: #1D1D1D;
     transform: translateX(-50%);
 }
@@ -417,6 +424,7 @@ a{
 }
 .services .service-content .card p{
     line-height: 1.5em;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Skills Styling */
@@ -450,6 +458,7 @@ a{
     bottom: -7px;
     padding: 3px;
     font-size: 0.6em;
+    font-family: 'Lato', sans-serif;
     background: #C4C4C4;
     transform: translateX(-50%);
 }
@@ -470,6 +479,7 @@ a{
 .skills .skills-content .left p{
     margin: 0.8em 0;
     text-align: justify;
+    font-family: 'Lato', sans-serif;
 }
 .skills .skills-content .left a{
     background: #FF7F50;
@@ -535,6 +545,45 @@ a{
 }
 .skills .skills-content .right .sql::before{
     width: 75%;
+}
+
+/*///////////////////////////*/
+.bg-fixed-1 {
+    background: url("../Images/Bg_1.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    font-family: "Titillium Web", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 2em 4em;
+}
+
+.bg-fixed-1::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-fixed-1 .bg-text-1 {
+    font-size: 2.5em;
+    margin-bottom: 0.8em;
+    font-family: 'Titan One', cursive;
+}
+
+.bg-fixed-1 .bg-text-2 {
+    font-size: 1.5em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 /* Teams Styling */
@@ -629,6 +678,7 @@ a{
     bottom: -7px;
     padding: 3px;
     font-size: 0.6em;
+    font-family: 'Lato', sans-serif;
     background: #C4C4C4;
     transform: translateX(-50%);
 }
@@ -648,6 +698,7 @@ a{
 }
 .contact .contact-content .left p{
     text-align: justify;
+    font-family: 'Lato', sans-serif;
 }
 .contact .contact-content .left .icons{
     margin: 0.6em 0;
@@ -670,6 +721,13 @@ a{
 }
 .contact .contact-content .row .info .sub-title{
     color: #333;
+}
+.contact .contact-content .row .info .sub-title a{
+    color: #333;
+    transition: all .1s ease-in-out;
+}
+.contact .contact-content .row .info .sub-title a:hover{
+    color: #FF7F50;
 }
 .contact .contact-content .right{
     padding: 0 2em;
@@ -785,37 +843,4 @@ footer .follow .followIcon i{
 }
 footer .follow .followIcon i:hover{
     color: #FF7F50;
-}
-
-.bg-fixed-1{
-    background: url("../Images/Bg_1.jpg") no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 50vh;
-    font-family: "Titillium Web", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    position: relative;
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    padding: 2em 4em;
-}
-.bg-fixed-1::after{
-    z-index: -1;
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.bg-fixed-1 .bg-text-1{
-    font-size: 2.5em;
-    margin-bottom: 0.8em;
-}
-.bg-fixed-1 .bg-text-2{
-    font-size: 1.5em;
 }
