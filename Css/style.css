@@ -699,6 +699,9 @@ a{
     font-size: 1.3em;
     margin-bottom: 0.8em;
 }
+.contact .contact-content .left{
+    align-self: flex-start;
+}
 .contact .contact-content .left p{
     text-align: justify;
     font-family: 'Lato', sans-serif;
@@ -734,6 +737,7 @@ a{
 }
 .contact .contact-content .right{
     padding: 0 2em;
+    align-self: flex-start;
 }
 .contact .right form .fields{
     display: flex;
@@ -802,9 +806,6 @@ a{
     background: #007222;
     color: white;
     text-align: center;
-}
-.spamDetection{
-    margin: 2em 0;
 }
 
 /* Footer Styling Section */
