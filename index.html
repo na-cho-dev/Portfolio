@@ -329,7 +329,7 @@
                         <div class="conf-msg"></div> 
                     </div>
                     
-                    <form name="contact" method="POST" data-netlify="true">
+                    <form name="contact" action="POST" data-netlify="true">
                         <div class="fields">
                             <div class="field">
                                 <input class="user" type="text" placeholder="Name" name="Name">
@@ -347,6 +347,10 @@
 
                         <div class="field txtarea">
                             <textarea class="textarea" id="" cols="30" rows="10" placeholder="Describe Project..." name="Message"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <div data-netlify-recaptcha="true"></div>
                         </div>
 
                         <div class="button">
