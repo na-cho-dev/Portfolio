@@ -118,11 +118,10 @@
         color: #FF7F50;
         font-weight: bolder;
     }
-    .about .about-content .left{
-        width: 100%;
-    }
     .about .about-content .left img{
-        width 80%;
+        width 250px;
+        height: 250px;
+        object-fit: cover;
     }
     .about .about-content .right{
         width: 90%;
