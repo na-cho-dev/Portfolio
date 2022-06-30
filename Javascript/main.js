@@ -102,113 +102,67 @@ var typed = new Typed(".typed2", {
 
 
 
+
 // const form = document.querySelector("#form");
 // const submitForm = (e) => {
 //   e.preventDefault();
-//   let msg = document.querySelector(".conf-msg");
 //   const inputs = document.querySelectorAll('.validate');
 //   const invalidFields = Array.from(inputs).filter(input => input.value === "");
 //   if (invalidFields.length > 0) {
 //     invalidFields.forEach((field) => {
-//         msg.classList.add('error');
-//         msg.innerHTML = "Please fill in all fields";
+//       field.classList.add('error')
 //     })
 //     return false;
-//   } 
-//   else {
+//   } else {
 //     form.submit();
 //   }
 // }
 // form.addEventListener("submit", submitForm);
 
+
+
 const form = document.querySelector("#form");
+
 const submitForm = (e) => {
-  e.preventDefault();
-  const inputs = document.querySelectorAll('.validate');
-  const invalidFields = Array.from(inputs).filter(input => input.value === "");
-  if (invalidFields.length > 0) {
-    invalidFields.forEach((field) => {
-      field.classList.add('error')
-    })
-    return false;
-  } else {
-    form.submit();
-  }
-}
-form.addEventListener("submit", submitForm);
+    e.preventDefault();
 
-
-
-// const form = document.querySelector("#form");
-// let inputs = Array.from(document.querySelectorAll('.validate'));
-// let msg = document.querySelector(".conf-msg");
-
-// const submitForm = (e) => {
-//     e.preventDefault();
-
+let inputs = Array.from(document.querySelectorAll('.validate'));
+let msg = document.querySelector(".conf-msg");
     
-//     const invalidFields = inputs.filter(input => input.value === "");
-//     const validFields = inputs.filter(input => input.value !== "");
+    const invalidFields = inputs.filter(input => input.value === "");
+    const validFields = inputs.filter(input => input.value !== "");
 
-//         if(invalidFields.length > 0){
-//             msg.classList.add("error");
-//             msg.innerHTML = "Please fill in all fields"
+        if(invalidFields.length > 0){
+            msg.classList.add("error");
+            msg.innerHTML = "Please fill in all fields"
             
-//             invalidFields.forEach(invalidInputs => {
-//                 invalidInputs.classList.add("inputError");
+            invalidFields.forEach(invalidInputs => {
+                invalidInputs.classList.add("inputError");
                 
 
-//                 setTimeout( () => {
-//                     msg.classList.remove("error");
-//                     msg.innerHTML = "";
-//                     invalidInputs.classList.remove("inputError");
-//             }, 3000);
-//             });
-//             return false;
-//         }
-//         else if(validFields.length > 0){
+                setTimeout( () => {
+                    msg.classList.remove("error");
+                    msg.innerHTML = "";
+                    invalidInputs.classList.remove("inputError");
+            }, 3000);
+            });
+            return false;
+        }
+        else if(validFields.length > 0){
             
-//             validFields.forEach(validInputs => {
-//                 validInputs.value = "";
-//             });
+            validFields.forEach(validInputs => {
+                validInputs.value = "";
+            });
 
-//             msg.classList.add("success");
-//             msg.innerHTML = "Sent Successfully, Thank you.";
+            msg.classList.add("success");
+            msg.innerHTML = "Sent Successfully, Thank you.";
 
-//             setTimeout( () => {
-//                     msg.classList.remove("success");
-//                     msg.innerHTML = "";
-//             }, 3000);
+            setTimeout( () => {
+                    msg.classList.remove("success");
+                    msg.innerHTML = "";
+            }, 3000);
 
-//             form.submit();
-//         }
-
-//     // inputs.forEach((input) => {
-//     //     if(input.value.trim() === ""){
-//     //         msg.classList.add("error");
-//     //         msg.innerHTML = "Please fill in all fields"
-//     //         input.style.border = "1px solid #a00000";
-
-//     //         setTimeout( () => {
-//     //             msg.classList.remove("error");
-//     //             msg.innerHTML = "";
-//     //             input.style.border = "1.5px solid #777777";
-//     //         }, 3000);
-//     //         return false
-//     //     } else{
-
-//     //         input.value = "";
-
-//     //         msg.classList.add("success");
-//     //         msg.innerHTML = "Sent Successfully, Thank you.";
-
-//     //         setTimeout( () => {
-//     //             msg.classList.remove("success");
-//     //             msg.innerHTML = "";
-//     //         }, 3000);
-//     //         form.submit();
-//     //     }
-
-//     // });
-// }
-// form.addEventListener("submit", submitForm);
+            form.submit();
+        }
+}
+form.addEventListener("submit", submitForm);
