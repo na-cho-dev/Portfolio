@@ -741,6 +741,7 @@ a{
 }
 .contact .right form .fields{
     display: flex;
+    column-gap: 10px;
 }
 .contact .right form .fields .field,
 .contact .right form .field{
@@ -791,6 +792,13 @@ a{
 }
 .captcha{
     margin: 1em 0 1.5em 0
+}
+
+.contact .right form textarea.inputError{
+    border: 1px solid #660000;
+}
+.contact .right form .field input.inputError{
+    border: 1px solid #660000;
 }
 .contact .right .conf-msg.error{
     padding: 0.4em;
