@@ -120,49 +120,87 @@ var typed = new Typed(".typed2", {
 // form.addEventListener("submit", submitForm);
 
 
-
 const form = document.querySelector("#form");
-
 const submitForm = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-let inputs = Array.from(document.querySelectorAll('.validate'));
-let msg = document.querySelector(".conf-msg");
-    
-    const invalidFields = inputs.filter(input => input.value === "");
-    const validFields = inputs.filter(input => input.value !== "");
+  let msg = document.querySelector(".conf-msg");
+  const inputs = document.querySelectorAll('.validate');
+  const invalidFields = Array.from(inputs).filter(input => input.value === "");
 
-        if(invalidFields.length > 0){
-            msg.classList.add("error");
-            msg.innerHTML = "Please fill in all fields"
-            
-            invalidFields.forEach(invalidInputs => {
-                invalidInputs.classList.add("inputError");
-                
+  if (invalidFields.length > 0) {
 
-                setTimeout( () => {
-                    msg.classList.remove("error");
-                    msg.innerHTML = "";
-                    invalidInputs.classList.remove("inputError");
-            }, 3000);
-            });
-            return false;
-        }
-        else if(validFields.length > 0){
-            
-            validFields.forEach(validInputs => {
-                validInputs.value = "";
-            });
+        msg.classList.add("error");
+        msg.innerHTML = "Please fill in all fields";
+        invalidFields.forEach((field) => {
+            field.classList.add('inputError')
+        })
 
-            msg.classList.add("success");
-            msg.innerHTML = "Sent Successfully, Thank you.";
+        setTimeout(() => {
+            msg.classList.remove("error");
+            msg.innerHTML = "";
+            invalidFields.forEach((field) => {
+            field.classList.remove('inputError')
+        })
+        }, 3000);
+        return false;
+  } 
+  else {
+    msg.classList.add("success");
+    msg.innerHTML = "Sent Successfully, Thank you.";
 
-            setTimeout( () => {
-                    msg.classList.remove("success");
-                    msg.innerHTML = "";
-            }, 3000);
+    inputs.forEach(inp => {
+        inp.value = "";
+    })
 
-            form.submit();
-        }
+    form.submit();
+  }
 }
 form.addEventListener("submit", submitForm);
+
+
+// const form = document.querySelector("#form");
+
+// const submitForm = (e) => {
+//     e.preventDefault();
+
+// let inputs = Array.from(document.querySelectorAll('.validate'));
+// let msg = document.querySelector(".conf-msg");
+    
+//     const invalidFields = inputs.filter(input => input.value === "");
+//     const validFields = inputs.filter(input => input.value !== "");
+
+//         if(invalidFields.length > 0){
+//             msg.classList.add("error");
+//             msg.innerHTML = "Please fill in all fields"
+            
+//             invalidFields.forEach(invalidInputs => {
+//                 invalidInputs.classList.add("inputError");
+                
+
+//                 setTimeout( () => {
+//                     msg.classList.remove("error");
+//                     msg.innerHTML = "";
+//                     invalidInputs.classList.remove("inputError");
+//             }, 3000);
+//             });
+//             return false;
+//         }
+//         else if(validFields.length > 0){
+            
+//             validFields.forEach(validInputs => {
+//                 validInputs.value = "";
+//             });
+
+//             msg.classList.add("success");
+//             msg.innerHTML = "Sent Successfully, Thank you.";
+
+//             setTimeout( () => {
+//                     msg.classList.remove("success");
+//                     msg.innerHTML = "";
+//             }, 3000);
+
+//             form.submit();
+//         }
+// }
+// form.addEventListener("submit", submitForm);
