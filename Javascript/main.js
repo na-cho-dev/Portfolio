@@ -149,9 +149,9 @@ const submitForm = (e) => {
     msg.classList.add("success");
     msg.innerHTML = "Sent Successfully, Thank you.";
 
-    inputs.forEach(inp => {
-        inp.value = "";
-    })
+    // inputs.forEach(inp => {
+    //     inp.value = "";
+    // })
 
     form.submit();
   }
