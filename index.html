@@ -337,33 +337,37 @@
                         <div class="conf-msg"></div> 
                     </div>
                     
-                    <form name="Contact" method="POST"  data-netlify="true" netlify-honeypot="bot-field" id="formSubmit">
+                    <form id="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                         <div class="fields">
                             <div class="field">
-                                <input class="user" type="text" placeholder="Name" name="Name">
+                                <input class="validate" type="text" placeholder="Name" name="name">
                             </div>
 
                             <div class="field">
-                                <input class="email" type="email" placeholder="Email" name="Email">
+                                <input class="validate" type="email" placeholder="Email" name="email">
                             </div>
                         </div>
 
                         <div class="field">
-                            <input class="subject" type="text" placeholder="Subject" name="Subject">
+                            <input class="validate" type="text" placeholder="Subject" name="subject">
                         </div>
 
                         <div class="field txtarea">
-                            <textarea class="textarea" id="" cols="30" rows="10" placeholder="Describe Project..." name="Message"></textarea>
+                            <textarea class="validate" id="" cols="30" rows="10" placeholder="Describe Project..." name="message"></textarea>
                         </div>
 
                         <div class="captcha">
-                            <div data-netlify-recaptcha="true" class="spamDetection"></div>
+                            <div data-netlify-recaptcha="true" class="spamDetection">
+                            </div>
                         </div>
 
                         <div class="">
                             <button class="btn" type="submit">Send Message</button>
                         </div>
                     </form>
+
+
+                
                 </div><!--Div Column Left end-->
 
             </div> <!--Contact Content end -->
