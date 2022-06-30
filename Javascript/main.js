@@ -87,13 +87,13 @@ window.addEventListener("scroll", ()=>{
 // Typing Animation Efffect
 
 var typed = new Typed(".typed1", {
-    strings: ["a Web Developer", "a Freelancer", "a Graphics Designer", "An Affiliate Marketer"],
+    strings: ["a Web Developer", "a Freelancer", "a Graphics Designer", "a Affiliate Marketer"],
     typeSpeed: 150,
     backSpeed: 80,
     loop: true
 });
 var typed = new Typed(".typed2", {
-    strings: ["a Web Developer", "a Freelancer", "a Graphics Designer", "An Affiliate Marketer"],
+    strings: ["a Web Developer", "a Freelancer", "a Graphics Designer", "a Affiliate Marketer"],
     typeSpeed: 150,
     backSpeed: 80,
     loop: true
@@ -113,8 +113,8 @@ let comment = document.querySelector(".textarea");
 
 //console.log(form);
 
-form.addEventListener("submit", (e) => {
-
+let submitForm = (e) => {
+    
     if(user.value.trim() == "" || email.value.trim() == "" || subject.value.trim() == "" || comment.value.trim() == ""){
 
         msg.classList.add("error");
@@ -151,7 +151,10 @@ form.addEventListener("submit", (e) => {
             msg.innerHTML = "";
         }, 3000);
 
-        form.submit();
+        // form.submit();
         return true;
-    }       
-});
+    }   
+    return;  
+}
+
+form.addEventListener("submit", submitForm);
