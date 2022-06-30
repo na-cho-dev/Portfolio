@@ -102,20 +102,36 @@ var typed = new Typed(".typed2", {
 
 
 
+// const form = document.querySelector("#form");
+// const submitForm = (e) => {
+//   e.preventDefault();
+//   let msg = document.querySelector(".conf-msg");
+//   const inputs = document.querySelectorAll('.validate');
+//   const invalidFields = Array.from(inputs).filter(input => input.value === "");
+//   if (invalidFields.length > 0) {
+//     invalidFields.forEach((field) => {
+//         msg.classList.add('error');
+//         msg.innerHTML = "Please fill in all fields";
+//     })
+//     return false;
+//   } 
+//   else {
+//     form.submit();
+//   }
+// }
+// form.addEventListener("submit", submitForm);
+
 const form = document.querySelector("#form");
 const submitForm = (e) => {
   e.preventDefault();
-  let msg = document.querySelector(".conf-msg");
   const inputs = document.querySelectorAll('.validate');
   const invalidFields = Array.from(inputs).filter(input => input.value === "");
   if (invalidFields.length > 0) {
     invalidFields.forEach((field) => {
-        msg.classList.add('error');
-        msg.innerHTML = "Please fill in all fields";
+      field.classList.add('error')
     })
     return false;
-  } 
-  else {
+  } else {
     form.submit();
   }
 }
