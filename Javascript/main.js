@@ -104,57 +104,56 @@ var typed = new Typed(".typed2", {
 
 
 
-let form = document.querySelector("#formSubmit");
-let msg = document.querySelector(".conf-msg");
-let user = document.querySelector(".user");
-let email = document.querySelector(".email");
-let subject = document.querySelector(".subject");
-let comment = document.querySelector(".textarea");
+// let form = document.querySelector("#formSubmit");
+// let msg = document.querySelector(".conf-msg");
+// let user = document.querySelector(".user");
+// let email = document.querySelector(".email");
+// let subject = document.querySelector(".subject");
+// let comment = document.querySelector(".textarea");
 
-//console.log(form);
+// //console.log(form);
 
-let submitForm = (e) => {
+// let submitForm = (e) => {
     
-    if(user.value.trim() == "" || email.value.trim() == "" || subject.value.trim() == "" || comment.value.trim() == ""){
+//     if(user.value.trim() == "" || email.value.trim() == "" || subject.value.trim() == "" || comment.value.trim() == ""){
 
-        msg.classList.add("error");
-        msg.innerHTML = "Please fill in all fields"
-        user.style.border = "1px solid #a00000";
-        email.style.border = "1px solid #a00000";
-        subject.style.border = "1px solid #a00000";
-        comment.style.border = "1px solid #a00000";
+//         msg.classList.add("error");
+//         msg.innerHTML = "Please fill in all fields"
+//         user.style.border = "1px solid #a00000";
+//         email.style.border = "1px solid #a00000";
+//         subject.style.border = "1px solid #a00000";
+//         comment.style.border = "1px solid #a00000";
 
-        setTimeout( () => {
-            msg.classList.remove("error");
-            msg.innerHTML = "";
-            user.style.border = "1.5px solid #777777";
-            email.style.border = "1.5px solid #777777";
-            subject.style.border = "1.5px solid #777777";
-            comment.style.border = "1.5px solid #777777";
-        }, 3000);
+//         setTimeout( () => {
+//             msg.classList.remove("error");
+//             msg.innerHTML = "";
+//             user.style.border = "1.5px solid #777777";
+//             email.style.border = "1.5px solid #777777";
+//             subject.style.border = "1.5px solid #777777";
+//             comment.style.border = "1.5px solid #777777";
+//         }, 3000);
 
-        e.preventDefault();
-        return false
-    }
-    else if (user.value.trim() !== "" || email.value.trim() !== "" || subject.value.trim() !== "" || comment.value.trim() !== ""){
+//         e.preventDefault();
+//         return false
+//     }
+//     else if (user.value.trim() !== "" || email.value.trim() !== "" || subject.value.trim() !== "" || comment.value.trim() !== ""){
 
-        user.value = "";
-        email.value = "";
-        subject.value = "";
-        comment.value = "";
+//         user.value = "";
+//         email.value = "";
+//         subject.value = "";
+//         comment.value = "";
 
-        msg.classList.add("success");
-        msg.innerHTML = "Sent Successfully, Thank you.";
+//         msg.classList.add("success");
+//         msg.innerHTML = "Sent Successfully, Thank you.";
 
-        setTimeout( () => {
-            msg.classList.remove("success");
-            msg.innerHTML = "";
-        }, 3000);
+//         setTimeout( () => {
+//             msg.classList.remove("success");
+//             msg.innerHTML = "";
+//         }, 3000);
 
-        // form.submit();
-        return true;
-    }   
-    return;  
-}
+//         // form.submit();
+//         return true;
+//     }    
+// }
 
-form.addEventListener("submit", submitForm);
+// form.addEventListener("submit", submitForm);
