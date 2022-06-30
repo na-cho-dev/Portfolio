@@ -118,7 +118,13 @@
         color: #FF7F50;
         font-weight: bolder;
     }
-
+    /*.about .about-content .left{
+        width: 70%;
+    }*/
+    .about .about-content .left img{
+        width: 250px;
+        height: 250px;
+    }
     .about .about-content .right{
         width: 90%;
         margin-top: 2em;
