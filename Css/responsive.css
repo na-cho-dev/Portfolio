@@ -52,6 +52,9 @@
         width: 80%;
         margin-bottom: 2em;
     }
+    .skill_image{
+        display: none;
+    }
 
     .contact .contact-content{
         display: flex;

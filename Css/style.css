@@ -501,6 +501,17 @@ a{
     color: #FF7F50;
     background: none;
 }
+.skill_image{
+    width: 50%;
+    align-items: flex-end;
+}
+.skill_image img{
+    border-radius: 10px;
+    width: 100%;
+}
+.skill_image img image{
+    width: 100px;
+}
 .skills .skills-content .right span{
     font-weight: 500;
 }
