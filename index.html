@@ -7,23 +7,19 @@
     <!-- <meta http-equiv="refresh" content="1"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="Css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link rel="icon" href="./Images/portfolio2.png">
+    <link rel="icon" href="./imgs/nachodev.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Titan+One&family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-
     <title>Nacho's Portfolio</title>
-
 </head>
 <body>
 
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="contain">
             <div class="boxes box1"></div>
             <div class="boxes box2"></div>
@@ -31,7 +27,7 @@
             <div class="boxes box4"></div>
         </div>
         <p>Welcome to my Portfolio. Please wait...</p>
-    </div>
+    </div> -->
 
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
@@ -41,19 +37,24 @@
         <div class="container">
             <div class="logo"><a href="#home">Nacho<span>.io</span></a></div>
             
-            <ul>
-                <li class="closeNav"><a href="#home">Home</a></li>
-                <li class="closeNav"><a href="#about">About</a></li>
-                <li class="closeNav"><a href="#service">Services</a></li>
-                <li class="closeNav"><a href="#skill">Skills</a></li>
-                <!-- <li><a href="#team">Team</a></li> -->
-                <li class="closeNav"><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="menu-btn">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
+            <div class="subnav">
+                <ul>
+                    <li class="closeNav"><a href="#home">Home</a></li>
+                    <li class="closeNav"><a href="#about">About</a></li>
+                    <li class="closeNav"><a href="#service">Services</a></li>
+                    <li class="closeNav"><a href="#skill">Skills</a></li>
+                    <!-- <li><a href="#team">Team</a></li> -->
+                    <li class="closeNav"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="themeIcon">
+                    <i class="fas fa-moon iconTheme" id="iconTheme"></i>
+                    <!-- <i class="fas fa-sun themeLight"></i> -->
+                </div>
+                <div class="menu-btn">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </div>
             </div>
         </div>
     </nav>
@@ -64,7 +65,7 @@
         <div class="container">
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Fortune Nacho</div>
+                <div class="text-2">Fortune <span>Iheanacho</span></div>
                 <div class="text-3">And I'm <span class="typed1"></span></div>
                 <a href="#contact">Hire Me</a>
             </div>
@@ -79,25 +80,27 @@
 
             <div class="about-content">
                 <div class="column left">
-                    <img src="./Images/myImg.jpg" alt="">
+                    <img src="./imgs/myImg.jpg" alt="" loading="lazy">
                 </div>
                 <div class="column right">
-                    <div class="text">I'm Fortune Iheanacho, 
-                        <div>and I'm <span class="typed2"></span>
-                        </div>
-                        </div>
-                    <p> As a Front-End Developer, I create scalable and customizable website with the use of high end web languages. I am skilled in the use of <b>HTML, CSS,</b> and <b>Javascript</b>. 
-                    </p>
-   
-                    <!-- <p>I work also with other languages used for backend developement which are NodeJS, <b>PHP</b> and <b>MySql</b>, for
-                    backend purposes.</p> -->
-
+                    <div class="text">I'm Fortune Iheanacho, and
+                        <div>I'm <span class="typed2"></span></div>
+                    </div>
                     <p>
-                    I am also a graphic desighner. With the knowledge of layout, typography and other design fundamentals, I create attractive and nice imagery designs. I develop the overall layout and production design for advertisements, brochures, magazines, corporate reports, logo and other design needs.
-                    <br><br>
-                    As a freelancer I am open to all kind of web programming services, design and branding with the assurance to satisfy your technological needs.
+                        I am a passionate Frontend Developer with a deep love for creating intuitive and engaging user interfaces. With a strong use of web technologies like HTML, CSS, JavaScript and other Frontend technologies, I create stunning and responsive designs, ensuring that users have a seamless experience across all devices.
                     </p>
-
+                    <p>
+                        Currently, I'm expanding my skill set and transitioning into Full Stack Software Engineering. I’m diving into backend development using Python, specifically with the Flask framework, and working with MySQL for database management. My goal is to become proficient in building robust, scalable applications from the ground up.
+                    </p>
+                    <p>
+                        In addition to my frontend expertise, I am also a skilled Bubble.io developer. I utilize this no-code platform to create fully functional and responsive web applications, enabling startups and businesses to launch their ideas rapidly and effectively.
+                    </p>
+                    <p>
+                        Outside of work, I’m a coding enthusiast who enjoys tackling challenging problems and staying up-to-date with new technologies. When I’m not busy coding, I enjoy relaxing with a good movie, playing games, or keeping up with the latest tech trends.
+                    </p>
+                    <p>
+                        I am always eager to connect with like-minded individuals and collaborate on exciting projects. Let’s build something amazing together! 🤝😌
+                    </p>
                     <a href="./Portfolio CV.pdf" download="NachoDev CV">Download CV</a>
                 </div>
             </div>
@@ -117,25 +120,61 @@
 
                 <div class="card">
                     <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Web Developement</div>
-                        <p>I offer exclusive, attractive, easy to navigate, and responsive website. With code written in HTML, CSS, and Javascript, which gives room for scalability and customization.  </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">Digital Marketing</div>
-                        <p>As a digital marketer, I plan digital marketing campaigns, including web, SEO/SEM, email, social media and display advertising, maintaining your social media presence across all digital channels.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
                         <i class="fas fa-code"></i>
-                        <div class="text">Graphics Design</div>
-                        <p>I create visual text and imagery concepts, using  high end computer software, to communicate ideas that inspire and captivate consumers.</p>
+                        <div class="text">Software Development and Programming</div>
+                        <p>
+                            I would create custom web applications tailored to your specific need by writing efficient and maintainable code. Whether building web applications with Flask or creating interactive interfaces with JavaScript and React, I would focus on creating functional and user-friendly software solutions. This includes both backend and frontend development, ensuring seamless integration and user experience.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-project-diagram"></i>
+                        <div class="text">Software Design and Architecture</div>
+                        <p>
+                            I would design the overall structure of software systems and databases to ensure they are scalable and efficient. For instance, I would create a database schema for a healthcare application to manage patient records and medical data effectively. I would also design APIs that facilitate smooth communication between different parts of the application.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-vial"></i>
+                        <div class="text">Software Testing and Quality Assurance</div>
+                        <p>
+                            I would ensure the reliability of my applications by writing unit tests and performing integration tests to verify that each component works as expected. I would set up automated testing to streamline the process, identify bugs early, and maintain high-quality code. I would also conduct performance testing to make sure the application can handle real-world usage.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-tools"></i>
+                        <div class="text">Software Maintenance and Support</div>
+                        <p>
+                            I would provide ongoing maintenance and support by monitoring applications for issues and fixing bugs promptly. I would update the software with new features or improvements based on user feedback and provide support to users by troubleshooting and resolving any problems they face.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-server"></i>
+                        <div class="text">DevOps and Deployment</div>
+                        <p>
+                            I would manage the deployment process by automating testing and deployment workflows using tools like GitHub Actions or Jenkins. I would handle server configurations and use containerization technologies like Docker to ensure that applications are deployed efficiently and can scale as needed.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-flask"></i>
+                        <div class="text">Research and Development</div>
+                        <p>
+                            I would stay updated with the latest technologies and best practices by researching and experimenting with new tools and frameworks. I would prototype new features or solutions to assess their feasibility and effectiveness before integrating them into the main project.
+                        </p>
                     </div>
                 </div>
 
@@ -153,75 +192,16 @@
                 <div class="column left">
                     <div class="text">My creative skills and experience</div>
                     <p>
-                        I offer the amazing and reliable services. I am skilled and experienced to work with. I have good problem solving skills, writing skills, communication skills, and am open-minded. I am able to decompose a problem into its integral parts, to get to the root of the issue giving you the chance to define it better. I come up with a well-structured action plan which is approximately a 100% guarantee of success.
+                        I offer a range of reliable and high-quality software engineering services, tailored to meet your needs. I bring a wealth of experience and expertise to every project, supported by strong problem-solving abilities, effective communication skills, and a structured approach to tackling challenges. I am adept at breaking down complex problems into manageable components, enabling a deeper understanding and more precise definition of the issue at hand. I then create a comprehensive, strategic action plan that is designed to deliver successful outcomes. My services include software development, system design, testing and quality assurance, deployment, and ongoing support. I am committed to delivering innovative, efficient, and secure solutions, ensuring that every project I work on is completed to the highest standard. Working with me means partnering with someone who is open-minded, proactive, and dedicated to turning your vision into reality.
                     </p>
                     <a href="#contact">Contact Me</a>
                 </div>
 
                 <div class="skill_image">
                     <div class="img">
-                        <img src="./Images/skills1.jpg" alt="">
+                        <img src="./imgs/skills1.jpg" alt="" loading="lazy">
                     </div>
                 </div>
-
-                <!-- <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>HTML</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line html"></div>
-                    </div>
-
-                    <div class="bars">
-                        <div class="info">
-                            <span>CSS</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-
-                    <div class="bars">
-                        <div class="info">
-                            <span>Javascript</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="line js"></div>
-                    </div>
-
-                    <div class="bars">
-                        <div class="info">
-                            <span>Jquery</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="line jquery"></div>
-                    </div>
-
-                    <div class="bars">
-                        <div class="info">
-                            <span>React JS</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="line react"></div>
-                    </div>
-
-                    <div class="bars">
-                        <div class="info">
-                            <span>PHP</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="line php"></div>
-                    </div>
-
-                    <div class="bars">
-                        <div class="info">
-                            <span>My Sql</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="line sql"></div>
-                    </div>
-                </div> -->
-
             </div>
         </div>
     </section>
@@ -229,72 +209,10 @@
   
     <div class="bg-fixed-1">
         <div class="bg-content">
-            <div class="bg-text-1">Want the best? You can get the best.</div>
-            <div class="bg-text-2">We are here for you --</div>
+            <div class="bg-text-1">Achieve Excellence. Get the Best from Me.</div>
+            <div class="bg-text-2">I’m here to make it happen — every step of the way.</div>
         </div>
     </div>
-
-
-    <!--Team Section-->
-
-    <!-- <section class="teams" id="team">
-        <div class="container">
-            <h2 class="title">My Teams</h2>
-
-            <div class="carousel">
-
-                <div class="card">
-                    <div class="box">
-                        <img src="./Images/Person-1.jpg" alt="">
-                        <div class="text">Someone's Name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <img src="./Images/Person-2.jpg" alt="">
-                        <div class="text">Someone's Name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <img src="./Images/Person-3.jpg" alt="">
-                        <div class="text">Someone's Name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <img src="./Images/Person-4.jpg" alt="">
-                        <div class="text">Someone's Name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <img src="./Images/Person-2.jpg" alt="">
-                        <div class="text">Someone's Name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <img src="./Images/Person-4.jpg" alt="">
-                        <div class="text">Someone's Name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse.</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section> -->
 
 
     <!--Contact Section-->
@@ -387,20 +305,22 @@
             <div class="follow">
                 <span>Follow us</span>
                 <div class="followIcon">
-                    <a href="https://github.com/Nacho369" target="_blank"><i class="fab fa-github" title="Github"></i></a>
-                    <a href="https://twitter.com/_NachoDev_" target="_blank"><i class="fab fa-twitter" title="Twitter"></i></a>
+                    <a href="https://github.com/na-cho-dev" target="_blank"><i class="fab fa-github" title="Github"></i></a>
+                    <a href="https://x.com/na_cho_dev" target="_blank"><i class="fab fa-twitter" title="Twitter"></i></a>
                     <a href="https://www.facebook.com/fortune.nacho" target="_blank"><i class="fab fa-facebook" title="Facebook"></i></a>
-                    <a href="https://www.instagram.com/_nachodev_/" target="_blank"><i class="fab fa-instagram" title="Instagram"></i></a>   
+                    <!-- <a href="https://www.instagram.com/_nachodev_/" target="_blank"><i class="fab fa-instagram" title="Instagram"></i></a> -->
+                    <a href="https://www.linkedin.com/in/fortune-iheanacho-862294237/" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>   
                 </div>
             </div>
         </div>
         
         <div class="copyright">
-            <span>Developed by <a href="#" class="copy">&copy; NachoDev</a> | <span class="far fa-copyright"></span> 2021 All rights reserved</span>
+            <span>Developed by <a href="#" class="copy">&copy; NachoDev</a> | <span class="far fa-copyright"></span> 2024 All rights reserved</span>
         </div>
         
     </footer>
 
-    <script src="./Javascript/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
