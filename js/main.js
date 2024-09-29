@@ -146,6 +146,12 @@ const userTheme = localStorage.getItem('theme');
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 let iconTheme = document.querySelector("#iconTheme");
 
+function updateIconColor() {
+    if (!document.body.classList.contains('darkTheme')) {
+        iconTheme.style.color = window.scrollY > 30 ? '#888888' : '#383838';
+    }
+}
+
 // Function to load the theme
 const loadTheme = (theme) => {
     if (theme === 'dark') {
@@ -157,7 +163,7 @@ const loadTheme = (theme) => {
         document.body.classList.remove('darkTheme');
         iconTheme.classList.add('fa-moon');
         iconTheme.classList.remove('fa-sun');
-        iconTheme.style.color = ''; // Reset color
+        updateIconColor();
     }
 }
 
@@ -179,10 +185,13 @@ iconTheme.addEventListener('click', () => {
     } else {
         iconTheme.classList.add('fa-moon');
         iconTheme.classList.remove('fa-sun');
-        iconTheme.style.color = ''; // Reset icon color for light mode
+        updateIconColor();
         localStorage.setItem('theme', 'light'); // Save preference
     }
 });
+
+window.addEventListener('scroll', updateIconColor);
+updateIconColor();
 
 
 

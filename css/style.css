@@ -142,7 +142,7 @@ a {
 .sticky {
     background-color: #000514;
     border-bottom: 5px solid var(--secondary-color);
-    padding: 2em;
+    padding: 1em;
 }
 
 .stickyLink {
@@ -177,7 +177,7 @@ a {
 }
 
 .navbar .subnav .iconTheme {
-    color: #414141;
+    color: #888888;
     font-size: 1.3em;
     cursor: pointer;
     line-height: normal;
@@ -228,7 +228,7 @@ a {
 }
 
 .menu-btn .bar {
-    width: 25px;
+    width: 23px;
     height: 2.2px;
     background-color: var(--secondary-color);
     margin: .3em 0;

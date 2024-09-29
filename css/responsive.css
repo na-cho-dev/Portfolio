@@ -182,5 +182,11 @@
     .contact .right .conf-msg{
         width: 90%;
     }
+
+    .f-column {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    
 }
 
