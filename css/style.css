@@ -70,7 +70,7 @@
   --primary-color: #000000;
   --secondary-color: #ff7f50;
   --primary-bg-color: #e7e7e7;
-  --primary-bg: url("https://res.cloudinary.com/nachodev/image/upload/laptop_white_ilz0q7.png")
+  --primary-bg: url("https://res.cloudinary.com/nachodev/image/upload/q_auto,f_auto/laptop_white_ilz0q7.png")
     no-repeat center;
 }
 
@@ -95,7 +95,7 @@ body {
 }
 
 body.darkTheme {
-  --primary-bg: url("https://res.cloudinary.com/nachodev/image/upload/laptop_black_cef644.jpg")
+  --primary-bg: url("https://res.cloudinary.com/nachodev/image/upload/q_auto,f_auto/laptop_black_cef644.jpg")
     no-repeat center;
 }
 
