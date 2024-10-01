@@ -19,9 +19,16 @@
   overflow: hidden;
   color: white;
 }
+
+.loader .loaderPara {
+  width: 90%;
+}
+
 .loader p {
   font-family: "Playwrite DE Grund", cursive;
+  font-size: medium;
   margin: 2px auto;
+  text-align: center;
 }
 
 .contain {
