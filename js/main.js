@@ -1,5 +1,5 @@
 // LOADER
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("load", function () {
   const imageUrls = [
     "https://res.cloudinary.com/nachodev/image/upload/laptop_white_ilz0q7.png",
     "https://res.cloudinary.com/nachodev/image/upload/laptop_black_cef644.jpg",
