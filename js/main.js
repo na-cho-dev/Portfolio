@@ -1,37 +1,36 @@
 // LOADER
-document.addEventListener("DOMContentLoaded", function () {
-  const imageUrls = [
-    "https://res.cloudinary.com/nachodev/image/upload/q_auto,f_auto/laptop_white_ilz0q7.png",
-    "https://res.cloudinary.com/nachodev/image/upload/q_auto,f_auto/laptop_black_cef644.jpg",
-  ];
 
-  let imagesLoaded = 0;
-  const totalImages = imageUrls.length;
+const imageUrls = [
+  "https://res.cloudinary.com/nachodev/image/upload/q_auto,f_auto/laptop_white_ilz0q7.png",
+  "https://res.cloudinary.com/nachodev/image/upload/q_auto,f_auto/laptop_black_cef644.jpg",
+];
 
-  function checkAllImagesLoaded() {
-    imagesLoaded++;
-    if (imagesLoaded === totalImages) {
-      console.log("Both images loaded successfully");
-      document.querySelector(".loader").style.display = "none";
-      document.getElementById("content").classList.remove("hidden");
-    }
+let imagesLoaded = 0;
+const totalImages = imageUrls.length;
+
+function checkAllImagesLoaded() {
+  imagesLoaded++;
+  if (imagesLoaded === totalImages) {
+    console.log("Both images loaded successfully");
+    document.querySelector(".loader").style.display = "none";
+    document.getElementById("content").classList.remove("hidden");
   }
+}
 
-  // Load each image
-  imageUrls.forEach((url) => {
-    const img = new Image();
-    img.src = url;
+// Load each image
+imageUrls.forEach((url) => {
+  const img = new Image();
+  img.src = url;
 
-    img.onload = function () {
-      console.log(`${url} loaded successfully`);
-      checkAllImagesLoaded();
-    };
+  img.onload = function () {
+    console.log(`${url} loaded successfully`);
+    checkAllImagesLoaded();
+  };
 
-    img.onerror = function () {
-      console.log(`Failed to load ${url}`);
-      checkAllImagesLoaded();
-    };
-  });
+  img.onerror = function () {
+    console.log(`Failed to load ${url}`);
+    checkAllImagesLoaded();
+  };
 });
 
 window.onload = function () {
