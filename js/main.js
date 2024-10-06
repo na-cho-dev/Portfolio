@@ -33,71 +33,69 @@ imageUrls.forEach((url) => {
   };
 });
 
-window.onload = function () {
-  window.addEventListener('scroll', () => {
-    let navbar = document.querySelector('.navbar');
-    let navbarLinks = document.querySelectorAll('.navbar a');
-    let scrollUpBtn = document.querySelector('.scroll-up-btn');
-    //let contentPosition = navbar.getBoundingClientRect().top;
-
-    if (window.scrollY > 30) {
-      navbar.classList.add('sticky');
-      navbarLinks.forEach((link) => {
-        link.classList.add('stickyLink');
-      });
-    } else {
-      navbar.classList.remove('sticky');
-      navbarLinks.forEach((link) => {
-        link.classList.remove('stickyLink');
-      });
-    }
-
-    if (this.scrollY > 500) {
-      scrollUpBtn.classList.add('show');
-    } else {
-      scrollUpBtn.classList.remove('show');
-    }
-  });
-
+window.addEventListener('scroll', () => {
+  let navbar = document.querySelector('.navbar');
+  let navbarLinks = document.querySelectorAll('.navbar a');
   let scrollUpBtn = document.querySelector('.scroll-up-btn');
-  let html = document.querySelector('html');
+  //let contentPosition = navbar.getBoundingClientRect().top;
 
-  scrollUpBtn.addEventListener('click', () => {
-    html.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
+  if (window.scrollY > 30) {
+    navbar.classList.add('sticky');
+    navbarLinks.forEach((link) => {
+      link.classList.add('stickyLink');
     });
+  } else {
+    navbar.classList.remove('sticky');
+    navbarLinks.forEach((link) => {
+      link.classList.remove('stickyLink');
+    });
+  }
+
+  if (this.scrollY > 500) {
+    scrollUpBtn.classList.add('show');
+  } else {
+    scrollUpBtn.classList.remove('show');
+  }
+});
+
+let scrollUpBtn = document.querySelector('.scroll-up-btn');
+let html = document.querySelector('html');
+
+scrollUpBtn.addEventListener('click', () => {
+  html.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
   });
+});
 
-  // MOBILE NAVIGATION BUTTON EFFECT
-  let nav = document.querySelector('.navbar ul');
-  let btn = document.querySelector('.menu-btn');
-  let closeNav = document.querySelectorAll('.closeNav');
-  let bar1 = document.querySelector('.bar1');
-  let bar2 = document.querySelector('.bar2');
-  let bar3 = document.querySelector('.bar3');
+// MOBILE NAVIGATION BUTTON EFFECT
+let nav = document.querySelector('.navbar ul');
+let btn = document.querySelector('.menu-btn');
+let closeNav = document.querySelectorAll('.closeNav');
+let bar1 = document.querySelector('.bar1');
+let bar2 = document.querySelector('.bar2');
+let bar3 = document.querySelector('.bar3');
 
-  btn.addEventListener('click', () => {
+btn.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  bar3.classList.toggle('close');
+  bar2.classList.toggle('close');
+  bar1.classList.toggle('close');
+});
+
+// MOBILE NAVIGATION CLOSE EFFECT
+
+closeNav.forEach(function (closeNavs, index, array) {
+  closeNavs.addEventListener('click', () => {
     nav.classList.toggle('active');
+    btn.classList.toggle('active');
     bar3.classList.toggle('close');
     bar2.classList.toggle('close');
     bar1.classList.toggle('close');
   });
-
-  // MOBILE NAVIGATION CLOSE EFFECT
-
-  closeNav.forEach(function (closeNavs, index, array) {
-    closeNavs.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      btn.classList.toggle('active');
-      bar3.classList.toggle('close');
-      bar2.classList.toggle('close');
-      bar1.classList.toggle('close');
-    });
-    // console.log(closeNavs);
-  });
-}; // Onload Function end
+  // console.log(closeNavs);
+});
 
 // Typing Animation Efffect
 

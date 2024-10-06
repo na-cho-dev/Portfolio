@@ -329,6 +329,48 @@ a {
   color: var(--secondary-color);
 }
 
+.home .home-content .followIcon {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+  line-height: 0;
+  margin-top: 1em;
+}
+
+.home .home-content .followIcon i {
+  font-size: 1.5em;
+}
+
+.home .home-content .followIcon .githubIcon {
+  color: #000000;
+  background-color: #f5f5f5;
+  border: 2px solid #000000;
+}
+
+.home .home-content .followIcon .linkedinIcon {
+  color: #0a66c2;
+  background-color: #e8f4f9;
+  border: 2px solid #0a66c2;
+}
+
+.home .home-content .followIcon .twitterIcon {
+  color: #1da1f2;
+  background-color: #e1f5fe;
+  border: 2px solid #1da1f2;
+}
+
+.home .home-content .followIcon .instagramIcon {
+  color: #f58529;
+  background-color: #fdf4e1;
+  border: 2px solid #f58529;
+}
+
+.home .home-content .followIcon .socialIcons:hover {
+  background: transparent;
+  transition: ease-in 0.3s;
+  color: var(--primary-color);
+}
+
 /* About Styling */
 .about {
   padding: 5em 2em;
