@@ -1,3 +1,8 @@
+setTimeout(() => {
+  document.querySelector('.loader').style.display = 'none';
+  document.getElementById('content').classList.remove('hidden');
+}, 5000);
+
 // LOADER
 
 const imageUrls = [
@@ -12,8 +17,6 @@ function checkAllImagesLoaded() {
   imagesLoaded++;
   if (imagesLoaded === totalImages) {
     console.log('Both images loaded successfully');
-    document.querySelector('.loader').style.display = 'none';
-    document.getElementById('content').classList.remove('hidden');
   }
 }
 
