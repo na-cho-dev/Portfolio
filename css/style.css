@@ -649,7 +649,8 @@ a {
 .projects .project_details {
   position: absolute;
   bottom: 15px;
-  left: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   display: none;
   z-index: 2;
